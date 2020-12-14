@@ -1,0 +1,402 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.cf::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.right{
+    float: right;
+}
+.left{
+    float: left;
+}
+.bx{
+    width: 1210px;
+    margin: 0 auto;
+}
+.header>a{
+    float: left;
+    margin-top: 35px;
+}
+.header ul li{
+    float: left;
+    line-height: 120px;
+    margin-left: 100px;
+    position: relative;
+}
+.header ul li a{
+    color: #333;
+    font-size: 14px;
+}
+.header ul li a:hover{
+    color: #49dcbf;
+}
+.header_span1{
+    width: 30px;
+    height: 2px;
+    background-color: #d7c476;
+    position: absolute;
+    top: 80px;
+    left: 15px;
+    display: none;
+}
+.header ul li a:hover+.header_span1{
+    display: block;
+}
+.tu img{
+    width: 100%;
+}
+.tu{
+    position: relative;
+    width: 100%;
+    height: 790px;
+    background-image: url("../images/机试大图1_02.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.tu:hover .tu_div1{
+    display: block;
+    transition: all .7s;
+}
+.tu_div1{
+    height: 100%;
+    width: 100%;
+    padding-top: 200px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+    transition: all .7s;
+}
+.tu .bx{
+    text-align: center;
+    position: relative;
+}
+.tu_p1{
+    font-size: 72px;
+    color: #fff;
+    margin-bottom: 25px;
+}
+.tu .bx hr{
+    margin: 35px auto;
+    width: 440px;
+}
+.tu_p2{
+    font-size: 36px;
+    color: #fff;
+}
+.tu_p3{
+    width: 10px;
+    height: 10px;
+    border-radius: 50px;
+    background-color: #fff;
+    margin: 0 auto;
+    position: absolute;
+    top: 200px;
+    left: 600px;
+}
+.tu_p4{
+    font-size: 18px;
+    color: #fff;
+    width: 530px;
+    margin: 0px auto;
+}
+.tu_div2{
+    width: 100%;
+    background-color: #2e3f51;
+    height: 110px;
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+}
+.tu_div3{
+    width: 800px;
+    margin: 0 auto;
+}
+.tu_div4{
+    width: 625px;
+    margin: 25px auto;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow:0px 4px 3px 2px #333333;
+    position: relative;
+}
+.tu_span1{
+    line-height: 60px;
+    color: #757575;
+    font-size: 18px;
+}
+.tu_p5{
+    padding:0px 25px;
+    border-right: 1px solid #d7d7d7;
+    margin-right: 10px;
+}
+.tu_p5 a{
+    color: #d7d7d7;
+    margin-right: 5px;
+}
+.tu_div4 a .icon-fangdajing{
+    color: #525252;
+    line-height: 60px;
+    margin: 0px 20px;
+    font-size: 20px;
+}
+.tu_div4 input{
+    line-height: 50px;
+    border: none;
+    outline: none;
+    padding-left: 5px;
+    width: 380px;
+    font-size: 18px;
+    color: #bbbbbb;
+    margin-top: 5px;
+    background-color: transparent;
+}
+.tu_div3>a{
+    line-height: 60px;
+    width: 150px;
+    margin: 25px 10px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    color: #fff;
+    background-color: #49dcbf;
+    box-shadow:0px 4px 3px 2px #333333;
+}
+.bx1{
+    position: relative;
+}
+.p1{
+    position: absolute;
+    top: 20px;
+    left: 380px;
+    color: #555;
+    font-size: 10px;
+}
+.p1 a{
+    color: #555;
+    font-size: 10px;
+    margin-right: 10px;
+}
+.recommend{
+    margin-bottom: 75px;
+}
+.recommend_div1{
+    text-align: center;
+}
+.recommend_p1{
+    font-size: 48px;
+    color: #333;
+    margin-top: 125px;
+}
+.recommend_p2{
+    font-size: 18px;
+    color: #999;
+}
+.recommend_p3{
+    font-size: 16px;
+    color: #333;
+    line-height: 100px;
+}
+.recommend_p3 a{
+    font-size: 16px;
+    color: #333;
+    margin: 0px 30px;
+}
+.recommend_div2{
+    width: 1920px;
+    margin: 0px auto;
+}
+.recommend_div3{
+    width: 470px;
+    height: 560px;
+    margin-right: 13px;
+    transition: all .7s;
+}
+.recommend1_div{
+    background-image: url("../images/机试小图1_02.png");
+}
+.recommend2_div{
+    background-image: url("../images/机试小图1_02.png");
+}
+.recommend3_div{
+    background-image: url("../images/机试小图2_03.png");
+}
+.recommend4_div{
+    background-image: url("../images/机试小图3_03.png");
+    margin-right: 0px;
+}
+.recommend_div4{
+    width: 100%;
+    height: 100%;
+    background-color: #2e3f51d0;
+    text-align: center;
+    padding-top: 125px;
+    box-sizing: border-box;
+    display: none;
+    transition: all .7s;
+}
+.recommend_div3:hover .recommend_div4{
+    display: block;
+}
+.recommend_p4{
+    font-size: 36px;
+    color: #fff;
+    margin-bottom: 25px;
+}
+.recommend_p5{
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 95px;
+}
+.recommend_p6{
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 60px;
+}
+.recommend_div4 a{
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 10px 65px;
+    font-size: 20px;
+    transition:  all .7s;
+}
+.recommend_div4 a:hover{
+    border: 2px solid #49dcbf;
+    color: #49dcbf;
+}
+.news{
+    background-color: #f4f4f4;
+    padding: 120px 0px;
+    width: 1920px;
+    margin: 0px auto;
+}
+.news_div1{
+    margin-top: 60px;
+}
+.news_p1{
+    width: 604px;
+    height: 309px;
+    background-color: #fff;
+    padding: 50px 50px;
+    box-sizing: border-box;
+}
+.news_span1{
+    display: block;
+    font-size: 36px;
+    color: #333333;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.news_span2{
+    font-size: 18px;
+    color: #9f9f9f;
+    line-height: 40px;
+}
+.link{
+    width: 1920px;
+    height: 623px;
+    margin: 0 auto;
+    background-image: url("../images/机试大图2_06.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.link:hover .link_div1{
+    display: block;
+}
+.link_div1{
+    height: 100%;
+    background-color: #2a343e91;  
+    padding: 170px 335px; 
+    box-sizing: border-box;
+    display: none;
+}
+.link_div1 a{
+    color: #fff;   
+    margin-right: 130px;
+    transition: all .7s;
+}
+.link_div1 a .iconfont{
+    font-size: 65px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    padding: 30px;
+    margin-left:3px;
+    display: block;
+    margin-bottom: 20px;
+}
+.link_span1{
+    font-size: 36px;
+}
+.link_div1 a:hover{
+    color: #49dcbf;   
+}
+.link_div1 a:hover .iconfont{
+    border: 3px solid #49dcbf;
+}
+.link_div1 .link_a1{
+    margin-right: 0px;
+}
+.footer{
+    width: 1920px;
+    background-color: #f4f4f4;
+    padding: 95px 0px ;
+    margin: 0px auto;
+}
+.footer .bx ul{
+    margin-right: 80px;
+}
+.footer .bx ul li a{
+    font-size: 20px;
+    color: #666666;
+    line-height: 40px;
+}
+.footer .bx ul li .footer_a1{
+    font-size: 24px;
+}
+.footer_li1{
+    margin-bottom: 40px;
+}
+.footer_p1{
+    margin-left: 60px;
+    width: 500px;
+    line-height: 40px;
+    margin-bottom: 10px;
+}
+.footer_p1 a,.footer_p1{
+    font-size: 24px;
+    color: #666;
+}
+.footer_p1 a{
+    margin-right:  40px;
+}
+.footer_p1 span{
+    display: block;
+    margin-bottom: 30px;
+}
+.footer_a2{
+    margin-left: 40px;
+}
+.footer_p2{
+    margin-bottom: 40px;
+}
+.footer_footer{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
+.footer_footer p{
+    font-size: 14px;
+    color: #666;
+    line-height: 25px;
+}

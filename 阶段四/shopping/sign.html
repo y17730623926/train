@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <title>sign</title>
+    <script src="../js/jQuery1.12.4.js"></script>
+</head>
+
+<body id="body">
+    <div class="bx">
+        <div class="log_div">
+            <img src="http://i1.vanclimg.com/cms/20160119/logo_new.jpg" alt="凡客诚品" title="凡客诚品" onclick="">
+        </div>
+        <form class="myform cf">
+            <div class="regist cf">
+                <h1>
+                    注册新用户 <span>我已经注册，现在就<a href="login.html">登录</a></span>
+                </h1>
+            </div>
+            <div class="content_right right">
+                <div class="email">
+                    <ul class="email_ul1">
+                        <li>
+                            <div class="email_div1">
+                                <input type="text" placeholder="用户名" class="usertxt usertext_1" id="username">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="email_div1">
+                                <input type="text" placeholder="eimal" class="usertxt usertext_1" id="email">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="email_div1">
+                                <input type="text" placeholder="填写手机号" class="usertxt usertext_1" id="phone">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="email_div1">
+                                <input type="password" placeholder="设定登录密码" class="usertxt usertext_1" id="password">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="email_div1">
+                                <input type="password" placeholder="再次输入密码" class="usertxt usertext_1"
+                                    id="for_password">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="login_checkbox">
+                                <input type="checkbox" id="checkbox">
+                                <span class="">请阅读</span>
+                                <a target="_blank" href="http://help.vancl.com/Category/69-1.html">《VANCL凡客诚品服务条款》</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="login_btn">立即注册</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content_left left">
+                <img src="./img/login120412_newlogo.jpg">
+            </div>
+        </form>
+        <script>
+            $(function () {
+                //手机号
+                $("#phone").blur(function () {
+                    if ($("#phone").val() !== "") {
+                        if (/^1[0-9]{10}$/.test($("#phone").val()) !== true) {
+                            alert("手机号不符");
+                            $("#phone").val("");
+                        }
+                    }
+                })
+                // 密码     密码格式为:开头必须是字母,中间可以是数字字母下划线,长度为6-12!
+                $("#for_password").blur(function () {
+                    if ($("#for_password").val() !== $("#password").val()) {
+                        alert("两次输入的密码不一致");
+                        $("#for_password").val("");
+                        $("#password").val("");
+                    }
+                })
+                $("#email").blur(function () {
+                    if ($("#email").val() !== "") {
+                        if (!/^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/.test($("#email").val())) {
+                            alert("邮箱格式错误");
+                        }
+                    }
+                });
+                $("#password").blur(function () {
+                    if (/^[A-z][0-9A-z_]{5,11}/.test($("#password").val()) !== true && $("#password").val() !== "") {
+                        alert("密码格式为:开头必须是字母,中间可以是数字字母下划线,长度为6-12!");
+                        $("#password").val("");
+                    }
+                });
+                //多选框点击事件
+                $("#checkbox").click(function () {
+                    if (this.checked === true) {
+                        $(".login_btn").addClass("on");
+                    } else {
+                        $(".login_btn").removeClass("on");
+                    }
+                })
+            });
+        </script>
+        <div class="footer">
+            <p>Copyright 2007 - 2020 vancl.com All Rights Reserved 京ICP证100557号
+                京公网安备11011502002400号出版物经营许可证新出发京批字第直110138号</p>
+        </div>
+        <script>
+            //提交
+            (function () {
+                $(".login_btn").click(function () {
+                    if ($("#checkbox")[0].checked === false) {
+                        alert("请勾选阅读协议！");
+                    } else if ($("#password").val() === $("#for_password").val()) {
+                        $.ajax({
+                            url: "http://192.168.1.122:3000/users/register",
+                            type: "POST",
+                            dataType: "json",
+                            data: {
+                                username: $("#username").val(),
+                                email: $("#email").val(),
+                                phone: $("#phone").val(),
+                                password: $("#password").val()
+                            },
+                            success: function (data) {
+                                console.log(data);
+                                if (data.state === 0) {
+                                    alert("注册成功!");
+                                    setTimeout(function () {
+                                        window.location.href = "login.html";
+                                    }, 1000);
+                                } else if (data.state === -1) {
+                                    alert("输入信息不能为空!");
+                                } else if (data === 1) {
+                                    alert("用户名已存在!");
+                                }
+                            },
+                            error: function () {
+                                alert("请求失败，请稍后重试或者检查网络！");
+                            }
+                        });
+                    }
+                })
+            })();
+        </script>
+    </div>
+
+
+</body>
+
+</html>

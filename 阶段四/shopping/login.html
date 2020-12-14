@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/verify.css">
+    <title>sign</title>
+    <script src="../js/jQuery1.12.4.js"></script>
+    <script src="./js/verify.js"></script>
+    <script src="../js/cookie.js"></script>
+</head>
+
+<body id="body">
+    <div class="bx">
+        <div class="log_div">
+            <img src="http://i1.vanclimg.com/cms/20160119/logo_new.jpg" alt="凡客诚品" title="凡客诚品" onclick="">
+        </div>
+        <form class="myform cf">
+            <div class="regist cf login_head">
+                <h1>
+                    凡客 Vancl 登录 <span>没有账户免费<a href="sign.html">注册</a></span>
+                </h1>
+            </div>
+            <div class="content_right right">
+                <div class="login">
+                    <div class="tag">
+                        <ul class="tags">
+                            <li class="on">普通登录</li>
+                            <li>快速登录</li>
+                        </ul>
+                    </div>
+                    <div class="user_info">
+                        <div class="username">
+                            <input type="text" placeholder="请输入用户名" id="username">
+                        </div>
+                        <div class="username password">
+                            <input type="text" placeholder="请输入密码" id="password">
+                        </div>
+                        <div id="mpanel2">
+                        </div>
+                        <button type="button" id="check-btn" class="verify-btn">确定</button>
+                        <div class="login_btn1 cf">
+                            <a href="javascript:;" class="forget">找回密码</a>
+                            <a href="javascript:;" class="log">登录</a>
+                        </div>
+                    </div>
+                    <div class="user_info vipUser_info">
+                        <div class="username vipUsername">
+                            <input type="text" placeholder="请输入手机号">
+                        </div>
+                        <div class="username">
+                            <input type="text" placeholder="请输入密码">
+                        </div>
+                        <div class="login_btn1 cf">
+                            <a href="javascript:;" class="log">登录</a>
+                        </div>
+                    </div>
+                    <div class="lines"></div>
+                    <div class="glup">
+                        <h2 class="hezuo">使用合作网站账号登录凡客</h2>
+                        <p class="qkimg cf">
+                            <a href="/login/wxlogin.aspx?http://login.vancl.com/login/Login.aspx?http://www.vancl.com?http%3A%2F%2Fwww.vancl.com%2F"
+                                id="a_wxlogin" class="weixin">
+                            </a>
+                            <a class="xiaomi" onclick="openUrl('xiaomi')" href="javascript:void(0)"></a>
+                            <a href="javascript:void(0)" onclick="openUrl('alipay')" class="zhifubao"></a>
+                            <a class="qq" href="javascript:void(0)" onclick="openUrl('qq')"></a>
+                            <a class="qihu360" href="javascript:void(0)" onclick="openUrl('qihoo360')"></a>
+                            <a class="weibo" href="javascript:void(0)" onclick="openUrl('sinaweibo')"></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="content_left left">
+                <img src="./img/login120412_newlogo.jpg">
+            </div>
+        </form>
+        <script>
+            $(function () {
+                var state = false;  //状态
+                var index = null;
+                $(".tags > li").click(function () {
+                    index = $(this).index();
+                    $(".tags > li").removeAttr("class");
+                    $(this).addClass("on");
+                    $(".user_info").css({ "display": "none" });
+                    $(".user_info").eq(index).css({ "display": "block" });
+                });
+                $('#mpanel2').codeVerify({
+                    type: 1,
+                    width: '360px',
+                    height: '50px',
+                    fontSize: '30px',
+                    codeLength: 6,
+                    btnId: 'check-btn',
+                    ready: function () { },
+                    success: function () {
+                        alert('验证匹配！');
+                        state = true;
+                    },
+                    error: function () {
+                        alert('验证码不匹配！');
+                    }
+                });
+                //登录
+                $(".log").click(function () {
+                    if (state && $("#username").val() !== "" && $("#password").val() !== "") {
+                        $.ajax({
+                            url: "http://192.168.1.122:3000/users/login",
+                            type: "POST",
+                            dataType: "json",
+                            data: {
+                                username: $("#username").val(),
+                                password: $("#password").val()
+                            },
+                            success: function (data) {
+                                console.log(data);
+                                if (data.state === 0) {
+                                    alert("登录成功!");
+                                    var cookie = new Cookie();
+                                    cookie.setCookie("token", data.token);
+                                    cookie.setCookie("username",$("#username").val());
+                                    window.location.href = "index.html";
+                                } else if (data.state === 2) {
+                                    alert("用户名或密码错误!");
+                                    $("#username").val("");
+                                    $("#password").val("");
+                                } else if (data.state === 1) {
+                                    alert("用户名不存在!");
+                                    $("#username").val("");
+                                    $("#password").val("");
+                                }
+                            }
+                        });
+                    } else if (state === false) {
+                        alert("验证码错误！");
+                    } else {
+                        alert("用户名或密码不能为空！");
+                    }
+                })
+            });
+        </script>
+        <div class="footer">
+            <p>Copyright 2007 - 2020 vancl.com All Rights Reserved 京ICP证100557号
+                京公网安备11011502002400号出版物经营许可证新出发京批字第直110138号</p>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

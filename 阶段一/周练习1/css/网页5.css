@@ -1,0 +1,86 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}
+li{
+   
+    list-style: none;
+}
+.div1{
+    margin: 0 auto;
+    width: 1200px;
+    height: 670px;
+    background-image: url("../img/2.jpg");
+}
+.div1_1{
+    padding-top: 100px;
+    margin-left: 30px;
+    color: sandybrown;
+    font-family: "宋体";
+    font-weight: bolder;
+    letter-spacing: 10px;
+    float: left;
+}
+.span1{
+    color: red;
+    font-size: 60px;
+}
+.p1{
+    letter-spacing: 5px;
+}
+.p2{
+    font-weight: bolder;
+    font-family: "宋体";
+}
+.d{
+    height:250px;
+    width: 230px;
+    background-color: white;
+    padding:20px 10px;
+    float: left;
+    margin-top: 100px;
+    margin-left: 300px;
+    padding-left: 30px;
+    border: 6px solid rgba(180, 180, 180, 0.432);
+}
+input{
+    background-color: rgba(180, 180, 180, 0.432);
+}
+.input1{
+    border: 1px solid rgb(180, 180, 180);
+    height: 23px;
+}
+.div2{
+    margin-top: 20px;
+}
+.input2{
+    width: 115px;
+}
+.input3{
+    width: 40px;
+    height: 26px;
+    border: 1px solid whitesmoke;
+}
+.div3{
+    margin: 10px auto;
+    font-size: 13px;
+}
+.a1{
+    margin-left: 13px;
+    color: black;
+}
+.a2{
+    color: sandybrown;
+}
+.button2{
+    width: 205px;
+    height: 35px;
+    margin-top: 10px;
+    color: white;
+    border: none;
+    font-weight: bolder;
+    background-color: sandybrown;
+}

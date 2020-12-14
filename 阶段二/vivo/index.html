@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./iconfont.css">
+    <title>vivo</title>
+    <style>
+        html {
+            font-size: 10px;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .cf::after {
+            content: "";
+            clear: both;
+            display: block;
+        }
+
+        .box>.ul1 {
+            width: 60rem;
+            margin: 0 auto;
+        }
+
+        .ul1 li {
+            float: left;
+        }
+
+        .ul1 li a {
+            display: block;
+            padding: 2rem 2.5rem;
+            font-size: 20px;
+            color: #333;
+            background-color: #f0f;
+        }
+
+        .box2 {
+            
+            background-color: blue;
+            display: none;
+        }
+
+        .ul2 li {
+            position: relative;
+            float: left;
+        }
+
+        .ul2 li a {
+            display: block;
+            float: left;
+        }
+
+        .ul2 li a span {
+            font-size: 50px;
+            color: red;
+            line-height: 6.5rem;
+        }
+
+        .box2 ul:hover+.div1 {
+            display: block;
+        }
+
+        .div1 {
+            width: 100%;
+            position: absolute;
+            top: 6.45rem;
+            display: none;
+            background-color: rgba(153, 153, 153, 0.5);
+        }
+
+        .div1 a {
+            display: block;
+            font-size: 30px;
+            color: red;
+            line-height: 6.5rem;
+            text-indent: 2em;
+        }
+
+        @media only screen and (max-width:1400px) and (min-width:800px) {
+            .ul1 {
+                display: block;
+            }
+
+            .div2 img {
+                width: 25%;
+                height: 20rem;
+                float: left;
+            }
+
+            .box2 {
+                display: none;
+            }
+        }
+
+        @media only screen and (max-width:800px) and (min-width:480px) {
+            .ul1 {
+                display: none;
+            }
+
+            .box2 {
+                display: block;
+
+            }
+
+            .div2 img {
+                width: 50%;
+                height: 20rem;
+                float: left;
+            }
+        }
+
+        @media only screen and (max-width:480px) and (min-width:0px) {
+            .ul1 {
+                display: none;
+            }
+
+            .box2 {
+                display: block;
+            }
+
+            .div2 img {
+                width: 100%;
+                height: 20rem;
+                float: left;
+            }
+        }
+
+        .div2 {
+            width: 100%;
+        }
+
+        img {
+            display: block;
+            width: 25%;
+            height: 20rem;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <ul class="ul1 cf">
+            <li><a href="#">NEX系列</a></li>
+            <li><a href="#">X系列</a></li>
+            <li><a href="#">S系列</a></li>
+            <li><a href="#">Y系列</a></li>
+            <li><a href="#">Z系列</a></li>
+        </ul>
+        <div class="box2">
+            <ul class="ul2 cf">
+                <li>
+                    <a href="#"><span class="iconfont icon-leibie"></span></a>
+
+                </li>
+            </ul>
+            <div class="div1">
+                <a href="#">NEX系列</a>
+                <a href="#">X系列</a>
+                <a href="#">S系列</a>
+                <a href="#">Y系列</a>
+                <a href="#">Z系列</a>
+            </div>
+        </div>
+
+    </div>
+    <div class="cf div2">
+        <img src="./img/6.jpg" alt="">
+        <img src="./img/7.jpg" alt="">
+        <img src="./img/1.jpg" alt="">
+        <img src="./img/9.jpg" alt="">
+    </div>
+</body>
+
+</html>

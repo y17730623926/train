@@ -1,0 +1,96 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+.img {
+    width: 80%;
+    height: 150px;
+    margin: 50px 10%;
+}
+.div1 {
+    width: 20%;
+    margin: 0 auto;
+    /* background-color: red; */
+    background-image: url("../img/关\ \ 闭.png");
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position-x: 260px;
+    border: 3px dashed rgba(160, 158, 158, 0.13) ;
+}
+.div1:hover {
+    background-image: url("../img/关\ \ 闭\ \(1\).png");
+    background-color: cyan;
+}
+.div2 {
+    width: 80%;
+    height: 40px;
+    background-color:rgb(73, 60, 60);
+    margin: 0 auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background-image: url("./user.png");
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position-y: 4px;
+}
+.div2:hover {
+    background-image: url("./用户.png");
+}
+.div2_1 {
+    background-image: url("./shopping.png");
+}
+.div2_1:hover{
+    background-image: url("./密码.png");
+}
+.input1 {
+    width: 60%;
+    height: 40px;
+    border-radius: 10px;
+    margin-left: 50px;
+    border: none;
+    background: transparent;
+    outline: none;
+}
+a {
+    margin-left: 30px;
+    font-size: 13px;
+    color: slategrey;
+}
+.a{
+    margin-left: 50px;
+    text-decoration: none;
+}
+.button1{
+    margin-top: 10px;
+    width: 80%;
+    height: 40px;
+    margin-left: 10%;
+    border: none;
+    border-radius: 10px;
+    background-color:rgb(73, 60, 60);
+    margin-bottom: 20px;
+}
+.button1:hover {
+    background-color: dodgerblue;
+}
+.hr_top{
+    margin-top: 10px;
+    width: 80px;
+    float: left;  
+}
+span {
+    margin: 0 21px;
+    font-size: 12px;
+    float: left; 
+}
+.hr_bottom{
+    margin-top: 10px;
+    width: 80px;
+    float: left;
+}
+.img2{
+    width: 30px;
+    height: 15px;
+    margin-left: 20px;
+    padding-top: 10px;
+}

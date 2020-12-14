@@ -1,0 +1,330 @@
+#body {
+    font: 100 12px " SimSun";
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+a:hover {
+    text-decoration: underline;
+}
+.right {
+    float: right;
+}
+.left {
+    float: left;
+}
+.cf::after{
+    clear: both;
+    display: block;
+    content: "";
+}
+.bx {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+}
+/* 注册 */
+.log_div{
+    padding: 10px 0 10px 0;
+    border-bottom: solid 1px #919191;
+}
+.log_div > img {
+    cursor: pointer;
+}
+.regist {
+    width: 100%;
+    margin: 30px 0 0 0;
+}
+.regist h1 {
+    height: 35px;
+    width: 415px;
+    float: right;
+    line-height: 35px;
+    margin: 0 100px 0 0;
+    border-bottom: 2px solid #b81e20;
+    font-size: 20px;
+    color: #a2a2a2;
+    font-weight: bolder;
+}
+.regist h1 span {
+    font-size: 14px;
+    float: right;
+}
+.regist h1 span a {
+    color: #b52024;
+    margin: 0 0 0 3px;
+}
+.content_left {
+    width: 465px;
+    height: 500px;
+    float: left;
+    margin: 0 0 0 130px;
+}
+.content_left img {
+    width: 465px;
+}
+.content_right {
+    width: 415px;
+    float: right;
+    margin: 10px 95px 0 0;
+}
+.email_ul1 li {
+    clear: both;
+    margin-top: 15px;
+    zoom: 1;
+    display: block;
+}
+.email_div1 {
+    position: relative;
+    width: 415px;
+    overflow: inherit;
+    zoom: 1;
+    height: 45px;
+    display: flex;
+    justify-content: space-between;
+}
+.usertxt {
+    width: 260px;
+    border: solid 1px #cbcbcb;
+    height: 43px;
+    line-height: 43px;
+    opacity: 0.5;
+    background: #fff;
+    color: #656565;
+    display: block;
+    text-align: left;
+    text-indent: 10px;
+    z-index: 9;
+    font-size: 14px;
+}
+.email_div1 > img {
+    cursor: pointer;
+    vertical-align: middle;
+    width: 140px;
+    height: 47px;
+}
+.v2reg_tips02 {
+    display: none;
+    color: #a10000;
+    border: 1px #ffd5d5 solid;
+    padding: 3px 5px;
+    position: absolute;
+    left: 0px;
+    z-index: 20;
+    background: #f9f9f9;
+    top: 46px;
+}
+.sprite_a {
+    width: 140px;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    background: #f5f5f5;
+    color: #b52024!important;
+    border: solid 1px #cbcbcb;
+    display: block;
+    float: left;
+    margin: 0 0 0 10px;
+    font-weight: bolder;
+}
+.sprite_a:hover {
+    text-decoration: underline;
+}
+.usertext_1 {
+    width: 100%;
+}
+.login_checkbox {
+    padding-top: 10px;
+    color: #9d9d9d;
+    font-size: 14px;
+    font-weight: bolder;
+    line-height: 12px;
+}
+.login_checkbox a {
+    color: #b52024;
+    font-weight: bolder;
+    font-size: 12px;
+}
+.login_checkbox input {
+    margin: 0;
+}
+.login_btn {
+    display: block;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    border: 0;
+    cursor: pointer;
+    clear: both;
+    font-size: 16px;
+    font-weight: bolder;
+    background: #9A9A9A;
+    color: #FFFFFF;
+}
+.login_btn.on{
+    background: #b52024;
+    color: #FFFFFF;
+}
+/* 登录 */
+.login {
+    width: 400px;
+    border: 1px solid #D1D1D1;
+    background-color: #fff;
+}
+.login_head h1 {
+    border: none;
+    font-size: 22px;
+    font-weight: 900;
+}
+.login .tag {
+    width: 400px;
+    height: 35px;
+    line-height: 35px;
+    border-bottom: 1px solid #cbcbcb;
+}
+.login .tags {
+    display: flex;
+}
+.tags li {
+    width: 200px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    background: #f5f5f5;
+    color: #656565;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 900;
+}
+.tags li.on {
+    background: #b42025;
+    color: #fff;
+}
+.user_info {
+    width: 415px;
+    padding: 10px 20px 10px;
+}
+.username {
+    height: 45px;
+    width: 360px;
+    border: solid 1px #cbcbcb;
+    position: relative;
+    overflow: hidden;
+    margin: 20px 0;
+}
+.username input {
+    display: block;
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    text-indent: 10px;
+    color: #acacac;
+    background: #fff;
+    font-size: 14px;
+}
+.login_btn1 {
+    width: 360px;
+}
+.login_btn1 a.forget {
+    line-height: 30px;
+    color: #b42025;
+    font-size: 14px;
+    font-weight: 800;
+    float: right;
+}
+.login_btn1 a.log {
+    width: 100%;
+    float: left;
+    display: block;
+    height: 45px;
+    line-height: 45px;
+    background: #b42025;
+    color: #fff;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 22px;
+}
+.login_btn1 a.log:hover {
+    font-weight: 900;
+    text-decoration: none;
+}
+.vipUser_info {
+    display: none;
+}
+.vipUsername {
+    display: flex;
+    justify-content: space-between;
+    border: none;
+}
+.vipUsername input {
+    border: solid 1px #cbcbcb;
+    box-sizing: border-box;
+}
+.vipUsername a {
+    box-sizing: border-box;
+    font-weight: 900;
+}
+.vipUsername .vipUsername_a1 {
+    white-space: nowrap;
+    display: inline-block;
+    height: 20px;
+}
+.vipUsername .vipUsername_a1:hover{
+    color: #b52024;
+}
+.lines {
+    border-bottom: dotted 1px #909090;
+    width: 100%;
+    height: 1px;
+    overflow: hidden;
+    margin: 30px 0 0 0;
+}
+.glup {
+    width: 360px;
+    height: auto;
+    margin: 10px auto;
+}
+.hezuo {
+    color: #a4a4a4;
+    line-height: 14px;
+    font-size: 14px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+.qkimg a.weixin {
+    background-position: 0px 0px;
+}
+.qkimg a.xiaomi {
+    background-position: -147px 0px;
+}
+.qkimg a.zhifubao {
+    background-position: -48px 0px;
+}
+.qkimg a.qq {
+    background-position: -189px 0px;
+}
+.qkimg a.qihu360 {
+    background-position: -228px 0px;
+}
+.qkimg a.weibo {
+    background-position: -93px 0px;
+    width: 36px;
+}
+.qkimg a {
+    width: 33px;
+    height: 33px;
+    display: block;
+    float: left;
+    margin: 0 10px 0 0;
+    background: url(http://i1.vanclimg.com/cms/20160118/logos.jpg) no-repeat left center;
+}
+/* 页脚 */
+.footer {
+    padding: 30px 0;
+}
+.footer p {
+    text-align: center;
+}

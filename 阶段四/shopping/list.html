@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品详情</title>
+    <script src="./js/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index_style.css">
+    <script src="../js/cookie.js"></script>
+</head>
+
+<body>
+    <div class="header_box">
+        <div class="bx">
+            <div class="header">
+                <div class="header_ss">
+                    <input type="text" placeholder="请输入您要搜索的商品" class="search_txt">
+                    <span id="search">🔍</span>
+                </div>
+                <span>您好,欢迎光临凡客诚品！</span>
+                <p class="header_login">
+                    <a href="./login.html" id="login">登录</a>
+                    <span>|</span>
+                    <a href="./sign.html" id="sign">注册</a>
+                    <a href="javascript:;">我的订单</a>
+                    <a href="javascript:;">网站公告</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="bx">
+        <!-- 二级导航 -->
+        <div class="nav">
+            <ul class="nav_ul">
+                <li>
+                    <a href="index.html">首页</a>
+                </li>
+                <li class="nav_ul_item">
+                    <a></a>
+                </li>
+                <li>
+                    <a href="javascript:;">更多</a>
+                </li>
+            </ul>
+        </div>
+        <!-- 内容 -->
+        <div class="list_conent">
+            <div class="conent_head cf">
+                <h2></h2>
+                <div class="conent_head_right right">
+                    <a href="javascript:;">产品描述</a>
+                    <span>|</span>
+                    <a href="javascript:;">评论</a>
+                    <span>|</span>
+                    <a href="javascript:;">提问</a>
+                </div>
+            </div>
+            <div class="move_box">
+                <div class="img_left">
+                    <div class="img_item on">
+                        <img src="" alt="">
+                    </div>
+                    <div class="img_item">
+                        <img src="" alt="">
+                    </div>
+                    <div class="img_item">
+                        <img src="" alt="">
+                    </div>
+                    <div class="img_item">
+                        <img src="" alt="">
+                    </div>
+                </div>
+                <div class="img_warp">
+                    <img src="" alt="">
+                    <div class="move_div"></div>
+                </div>
+                <div class="pos_warp">
+                    <img src="" alt="">
+                </div>
+                <div class="list_warp">
+                    <p class="list_dian"></p>
+                    <p class="list_head">原价：￥ <span class="list_span1"></span>特惠价：￥ <span class="list_span2"></span></p>
+                    <p class="list_tj"><input type="number" value="1" min="1">件</p>
+                    <div class="list_btn">
+                        <button>立即购买</button>
+                        <button id="cart">加入购物车</button>
+                    </div>
+                    <a class="list_yhj">
+                    </a>
+                </div>
+            </div>
+            <script>
+                (function () {
+                    //获取数据//放大镜
+                    var huodong_item = $(".huodong_item").eq(0);
+                    var info_val = decodeURI(location.search.split("=")[1]);
+                    $.ajax({
+                        url: "http://localhost/w/website/findGoodsDetail",
+                        type: "get",
+                        dataType: "json",
+                        data: {
+                            info: info_val
+                        },
+                        success: function (data) {
+                            console.log(data);
+                            var arr = data.data.detail.tbk_item_info_get_response.results.n_tbk_item[0];
+                            console.log(arr);
+                            $(".conent_head").find("h2").text(arr.cat_leaf_name)
+                            $(".list_head").find(".list_span1").text(arr.reserve_price);
+                            $(".list_dian").text(arr.nick)
+                            if (arr.sale_price) {
+                                $(".list_head").find(".list_span2").text(arr.sale_price);
+                            } else {
+                                $(".list_head").find(".list_span2").text(arr.reserve_price);
+                            }
+                            if (arr.kuadian_promotion_info) {
+                                $(".list_yhj").text(arr.kuadian_promotion_info);
+                            } else {
+                                $(".list_yhj").text("暂无满减");
+                            }
+                            if (arr.small_images !== undefined) {
+                                arr.small_images.string.forEach(function (item, index) {
+                                    $(".img_item").eq(index).find("img").attr("src", item);
+                                    $(".jieshao_box").append(`
+                                <img src="${item}" alt="">
+                                `);
+                                });
+                            } else {
+                                $(".img_item").find("img").attr("src", arr.pict_url)
+                            }
+
+                            var img_src = $(".img_item").eq(0).find("img").attr("src");
+                            $(".img_warp").find("img").attr("src", img_src);
+                            $(".pos_warp").find("img").attr("src", img_src);
+                            $("#cart").click(function () {
+                                if (arr.sale_price) {
+                                   var unit = arr.sale_price;
+                                } else {
+                                   var unit = arr.reserve_price;
+                                }
+                                if (localStorage.getItem("array")) {
+                                    
+                                    var arrObject = localStorage.getItem("array");
+                                   console.log(arrObject);
+                                    arrObject = JSON.parse(arrObject);
+                                    
+                                } else {
+                                    var arrObject = [];
+                                }
+                                // 顺序
+                                var num = arrObject.length > 0 ? arrObject.length + 1 : 1;
+                                var _object = {
+                                    title:arr.cat_leaf_name,    //商品名
+                                    img:arr.pict_url,           //图片地址
+                                    item_id:info_val,           //商品ID
+                                    num:num,                    //顺序
+                                    state:false,                //状态
+                                    unit:unit,                   //单价
+                                    number:$(".list_tj").find("input").val()    //个数
+                                }
+                                arrObject.push(_object);
+                                localStorage.setItem("array",JSON.stringify(arrObject));
+                                window.location.href = "./cart.html";
+                            });
+                        }
+                    })
+                    //点击事件
+                    $(".img_item").click(function () {
+                        $(this).addClass("on").siblings().removeClass("on");
+                        var img_src = $(this).find("img").attr("src");
+                        $(".img_warp").find("img").attr("src", img_src);
+                        $(".pos_warp").find("img").attr("src", img_src);
+                    });
+                })();
+            </script>
+            <script>
+                (function () {
+                    //放大镜
+                    $(".img_warp").mouseenter(function () {
+                        $(".pos_warp")[0].style.display = "block";
+                        $(".move_div")[0].style.display = "block";
+                        var img_warp_left = $(".img_warp").offset().left;
+                        var img_warp_top = $(".img_warp").offset().top;
+                        var max_X = $(".img_warp").width() - $(".move_div").width();
+                        var max_Y = $(".img_warp").height() - $(".move_div").height();
+                        var box_X = $(".pos_warp").find("img").width() - $(".pos_warp").width();
+                        var box_Y = $(".pos_warp").find("img").height() - $(".pos_warp").height();
+                        $(".img_warp").mousemove(function (e) {
+                            var x = e.pageX - img_warp_left - $(".move_div").width() / 2;
+                            var y = e.pageY - img_warp_top - $(".move_div").height() / 2;
+                            x = x < 0 ? 0 : x;
+                            x = x > max_X ? max_X : x;
+                            y = y > max_Y ? max_Y : y;
+                            y = y < 0 ? 0 : y;
+                            $(".move_div").css({ "left": x + "px", "top": y + "px" })
+                            var X = x * box_X / max_X;
+                            var Y = y * box_Y / max_Y;
+                            $(".pos_warp").find("img").css({ "left": -X + "px", "top": -Y + "px" })
+                        });
+                    });
+                    $(".img_warp").mouseleave(function () {
+                        $(".pos_warp")[0].style.display = "none";
+                        $(".move_div")[0].style.display = "none";
+                    })
+                })();
+            </script>
+            <div class="jieshao_box">
+            </div>
+        </div>
+        <!-- 页脚 -->
+        <div class="footer">
+            <p>Copyright 2007 - 2020 vancl.com All Rights Reserved 京ICP证100557号
+                京公网安备11011502002400号出版物经营许可证新出发京批字第直110138号</p>
+        </div>
+    </div>
+    <script>
+        (function () {
+            var item_li = $(".nav_ul_item");
+            //获取是否登录
+            var cookie = new Cookie();
+            var token = cookie.getCookie("token");
+            var maxPage = 9;
+            var pageNum = 1;
+            if (token) {
+                $("#login").text("用户名");
+                $("#sign").text("退出登录").attr("href", "./login.html");
+            }
+            //搜索
+            $("#search").click(function () {
+                if ($(".search_txt").val()) {
+                    window.location.href = "./sort.html?aa=" + $(".search_txt").val();
+                } else {
+                    window.location.href = "./sort.html?aa=更多";
+                }
+            });
+            //获取数据
+            var huodong_item = $(".huodong_item").eq(0);
+            var info_val = decodeURI(location.search.split("=")[1]);
+            //二级导航
+            $.ajax({
+                url: "http://localhost/w/website/findGoodsTypeList",
+                type: "get",
+                dataType: "json",
+                data: {},
+                success: function (data) {
+                    console.log(data);
+                    data.data.forEach(function (item, index) {
+                        var con = item_li.clone(true);
+                        con.removeAttr("class").find("a").attr("href", "./sort.html?aa=" + item.name).text(item["name"]);
+                        $(".nav_ul > li").eq($(".nav_ul > li").length - 1).before(con);
+                    });
+                }
+            })
+        })();
+    </script>
+</body>
+
+</html>

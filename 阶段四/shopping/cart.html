@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>购物车</title>
+    <script src="./js/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index_style.css">
+    <script src="../js/cookie.js"></script>
+</head>
+
+<body>
+    <div class="header_box">
+        <div class="bx">
+            <div class="header">
+                <div class="header_ss">
+                    <input type="text" placeholder="请输入您要搜索的商品" class="search_txt">
+                    <span id="search">🔍</span>
+                </div>
+                <span>您好,欢迎光临凡客诚品！</span>
+                <p class="header_login">
+                    <a href="./login.html" id="login">登录</a>
+                    <span>|</span>
+                    <a href="./sign.html" id="sign">注册</a>
+                    <a href="javascript:;">我的订单</a>
+                    <a href="javascript:;">网站公告</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="bx">
+        <!-- 二级导航 -->
+        <div class="nav">
+            <ul class="nav_ul">
+                <li>
+                    <a href="index.html">首页</a>
+                </li>
+                <li class="nav_ul_item">
+                    <a></a>
+                </li>
+                <li>
+                    <a href="javascript:;">更多</a>
+                </li>
+            </ul>
+        </div>
+        <div class="cart_box">
+            <p class="cart_head">
+                <span class="on">1.我的购物车</span>
+                <span>2.填写核对信息单</span>
+                <span>3.成功提交订单</span>
+            </p>
+            <div class="cart_conent">
+                <h2>我的购物车</h2>
+                <p class="tishi">
+                    <span>温馨提示：</span>1.选购清单中的商品无法保留库存，请您及时结算。2.商品的价格和库存将以订单提交时为准。3.促销活动满减优惠将均摊至商品小计中。
+                </p>
+                <table class="cart_table table table-hover" id="table">
+                    <thead>
+                        <tr>
+                            <th><input type="checkbox" id="quanxuan">全选</th>
+                            <th>商品名称</th>
+                            <th>单价</th>
+                            <th>数量</th>
+                            <th>小计</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+                    </tbody>
+                </table>
+                <!-- 总计 -->
+                <div class="agg">
+                    <p>总计：<span>0</span>元<button class="right">立即支付</button></p>
+                </div>
+                <!-- 内容 -->
+                <script>
+                    (function () {
+                        //添加数据
+                        var JSON_obj = JSON.parse(localStorage.getItem("array"));
+                        JSON_obj.forEach(function (item, index) {
+                            console.log(item);
+                            $("#tbody").append(`
+                                    <tr>
+                                        <td class="sx">${item.num}<input type="checkbox"></td>
+                                        <td><img src="${item.img}" alt=""><a href="./list.html?aa=${item.item_id}">${item.title}</a></td>
+                                        <td class="unit">${item.unit}元</td>
+                                        <td>
+                                            <a href="javascript:;" class="a jian">-</a>
+                                            <a href="javascript:;" class="a number">${item.number}</a>
+                                            <a href="javascript:;" class="a jia">+</a>
+                                        </td>
+                                        <td class="subtotal">${item.number * item.unit}元</td>
+                                        <td>
+                                            <a href="javascript:;" id="del">删除</a>
+                                        </td>
+                                    </tr>
+                                `);
+                        });
+                        // 加减数量（事件委托）
+                        $("#table").click(function (e) {
+                            var _this = $(e.target);
+                            //加
+                            if (_this.hasClass("jia")) {
+                                //增值
+                                _this.prev(".number").text(+_this.prev(".number").text() + 1);
+                                //个数
+                                var a = _this.prev(".number").text();
+                                // 单价
+                                var subtotal = parseFloat(_this.closest("tr").find(".unit").text());
+                                _this.closest("tr").find(".subtotal").text(subtotal * a + "元");
+                                // 总价
+                                ggfun();
+                            //减    
+                            } else if (_this.hasClass("jian")) {
+                                //减值
+                                _this.next(".number").text(+_this.next(".number").text() - 1);
+                                if (+_this.next(".number").text() < 1) {
+                                    _this.next(".number").text(1);
+                                }
+                                //个数
+                                var a = _this.next(".number").text();
+                                // 单价
+                                var subtotal = parseFloat(_this.closest("tr").find(".unit").text());
+                                _this.closest("tr").find(".subtotal").text(subtotal * a + "元");
+                                //总价
+                                ggfun();
+                            //删除      
+                            } else if (_this.text() === "删除") {
+                                //获取同行tr的顺序
+                                var index_;
+                                var number_ = +_this.closest("tr").find(".sx").text();
+                                JSON_obj.forEach(function (item, index) {
+                                    if (+item.num > number_) {
+                                        item.num = +item.num - 1;   //更新内存里面的顺序
+                                        $(".sx").eq(index).text(+$(".sx").eq(index).text() - 1).append(`<input type="checkbox">`);
+                                    }
+                                    else if (item.num === number_) {
+                                        index_ = index;
+                                    }
+                                });
+                                JSON_obj.splice(index_, 1);   //删除内存当前数据
+                                //传出数据locastorage
+                                localStorage.setItem("array", JSON.stringify(JSON_obj));
+                                //删除一行
+                                _this.closest("tr").remove();
+                            //全选       
+                            } else if (_this.is("input") && _this.parent().is("th")) {
+                                var zongji = 0;
+                                var input_arr = $("tbody .subtotal");
+
+                                //input全选
+                                $("#table").find("input").prop("checked", _this[0].checked);
+                                //总计
+                                ggfun();
+                            } else if (_this.is("input") && _this.parent().is("td")) {
+                                // 总计
+                                ggfun();
+                            }
+                            // 改总计
+                            function ggfun() {
+                                $("thead").find("input").removeAttr("checked");
+                                var state = true;   //状态
+                                var arr = $("#tbody").find("input");
+                                //判断所有
+                                for (var i = 0; i < arr.length; i++) {
+                                    if (!arr[i].checked) {
+                                        state = false;
+                                    }
+                                }
+                                if (state) {
+                                    $("thead").find("input").prop("checked", true);
+                                }
+                                //总计
+                                var zongji_ = 0;
+                                for (var j = 0; j < arr.length; j++) {
+                                    if (arr.eq(j).prop("checked")) {
+                                        zongji_ += parseFloat(arr.eq(j).closest("tr").find(".subtotal").text());
+                                    }
+                                }
+                                $(".agg").find("span").text(zongji_);
+                            }
+                        });
+                    })();
+                </script>
+            </div>
+        </div>
+        <!-- 页脚 -->
+        <div class="footer">
+            <p>Copyright 2007 - 2020 vancl.com All Rights Reserved 京ICP证100557号
+                京公网安备11011502002400号出版物经营许可证新出发京批字第直110138号</p>
+        </div>
+        <!-- 顶部 -->
+        <script>
+            (function () {
+                var item_li = $(".nav_ul_item");
+                //获取是否登录
+                var cookie = new Cookie();
+                var token = cookie.getCookie("token");
+                var maxPage = 9;
+                var pageNum = 1;
+                if (token) {
+                    $("#login").text("用户名");
+                    $("#sign").text("退出登录").attr("href", "./login.html");
+                }
+                //搜索
+                $("#search").click(function () {
+                    if ($(".search_txt").val()) {
+                        window.location.href = "./sort.html?aa=" + $(".search_txt").val();
+                    } else {
+                        window.location.href = "./sort.html?aa=更多";
+                    }
+                });
+                //获取数据
+                var huodong_item = $(".huodong_item").eq(0);
+                var info_val = decodeURI(location.search.split("=")[1]);
+                //二级导航
+                $.ajax({
+                    url: "http://localhost/w/website/findGoodsTypeList",
+                    type: "get",
+                    dataType: "json",
+                    data: {},
+                    success: function (data) {
+                        console.log(data);
+                        data.data.forEach(function (item, index) {
+                            var con = item_li.clone(true);
+                            con.removeAttr("class").find("a").attr("href", "./sort.html?aa=" + item.name).text(item["name"]);
+                            $(".nav_ul > li").eq($(".nav_ul > li").length - 1).before(con);
+                        });
+                    }
+                })
+            })();
+        </script>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,182 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+a {
+   height: 20px;
+    text-decoration: none;
+    /* background-color: chartreuse; */
+    color: black;
+    margin-left: 5px;
+    margin-top: 20px;
+}
+li{
+    list-style: none;
+}
+.fd::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.fd{
+    /* background-color: red; */
+    width: 1380px;
+    margin: 0 auto; 
+}
+.aa{
+    float: left;
+    height: 40px;
+}
+.img1{
+    height: 40px;
+    width: 150px;
+}
+.div1{
+    width: 350px;
+    /* background-color:black; */
+    margin-left: 340px;
+    border: 1px solid rgb(197, 198, 199) ;
+    border-radius: 20px;
+    margin-top: 20px;
+    float: left;
+}
+.div1::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.div1_1{
+    
+    width: 60px;
+    /* padding: 30px; */
+    /* background-color: blue; */
+    background-image: url("../img/腾讯箭头1.png");
+    background-repeat: no-repeat;
+    background-size: 10px;
+    background-position-x: 40px;
+    background-position-y: 15px;
+    float: left;
+    padding-top: 5px;
+}
+.div1_1:hover{
+    background-position-y: -17px;
+}
+input{
+    height: 34px;
+    outline: none;
+    border: none;
+    float: left;
+    width: 100px;
+    background: transparent;
+}
+.btn1{
+    width: 100px;
+    height: 38px;
+    color: seashell;
+    font-weight: bolder;
+    font-size: 16px;
+    background-color: royalblue;
+    border-radius: 20px;
+    float: right;
+}
+.btn2{
+    color: skyblue;
+    width: 40px;
+    height: 40px;
+}
+.btn2:hover{
+    border: 2px solid rgb(159, 200, 241);
+}
+.div2_1{
+    width: 60px;
+    height: 30px;
+    float: right;
+    background-image: url("../img/腾讯精灵图.png");
+    background-repeat: no-repeat;
+    background-size: 40px;
+    background-position-x: 5px;
+    background-position-y: -166px;
+    margin-top: 25px;
+}
+.div2_1:hover{
+    background-position-y: -210px;
+}
+.div3{
+    height: 30px;
+    margin-right: 10px;
+}
+.div3::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.div2_2{
+    width: 60px;
+    height: 30px;
+    float: right;
+    background-image: url("../img/腾讯精灵图.png");
+    background-repeat: no-repeat;
+    background-size: 40px;
+    background-position-x: 5px;
+    background-position-y: -84px;
+    margin-top: 25px;
+}
+.div2_2:hover{
+    background-position-y: -128px;
+}
+
+button{
+    float: right;
+    margin-top: 15px;
+    border: 1px solid rgb(197, 198, 199);
+    width: 10%;
+    height: 50px;
+    outline: none;
+    color: royalblue;
+    font-size: 16px;
+}
+.div4{
+    width: 1380px;
+    height: 60px;
+    background-color: rgb(0, 102, 255);
+    margin: 0px auto;
+    margin-top: 50px;
+    
+    border-radius: 4px;
+}
+li{
+    float: left;
+    height: 30px;   
+    width: 50px;
+    margin-left: 30px;
+    margin-top: 7px;
+    background: none;
+    text-align: center;
+    padding-top: 15px;
+    font-family: "宋体";
+    color: white;
+    font-weight: bolder;
+    font-size: 18px;
+}
+li:hover{
+    background-color: rgb(224, 224, 224);
+}
+.btn3{
+    height: 35px;
+    width: 80px;
+    margin-left: 10px;
+    background: none;
+    text-align: center;
+    font-family: "宋体";
+    color: white;
+    font-weight: bolder;
+    font-size: 18px;
+    border: none;
+    background-image: url("../img/腾讯箭头.png");
+    background-repeat: no-repeat;
+    background-size: 10px;
+    background-position-y: 15px;
+}
+.btn3:hover{
+    background-position-y: -16px;
+}

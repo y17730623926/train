@@ -1,0 +1,528 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.div1{
+    height: 70px;
+    width: 100%;
+}
+.div1_bx{
+    height: 70px;
+    width: 1000px;
+    margin:0px auto;
+}
+.div1_logo{
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    text-align: center;
+    margin-top: 15px;
+    margin-right: 30px;
+    float: left;
+}
+.a_logo{
+    color: white;
+    font-size: 12px;
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: bolder;
+}
+.div1_span1{
+    font-size: 18px;
+    display: inline-block;
+    margin-top: 22px;
+    margin-left: 40px;
+}
+.div1_span2{
+    font-weight: bolder;
+}  
+.div_a1{
+    color: black;
+}
+.div_a2{
+    float: right;
+    margin-top: 24px;
+    margin-left: 24px;
+}
+.div2{
+    width: 1900px;
+    height: 900px;
+    margin:0px auto;
+    background-image: url("../ps图/images/images/单页-家具设计\(头背景图\)_02.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.div2_1{
+    width: 432px;
+    height: 145px;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+.div2_1_span1{
+    font-size: 69.11px;
+    font-weight: bolder;
+}
+.div2_1_span2{
+    font-size: 69.11px;
+    float: right;
+    font-weight: bolder;
+
+}
+.div2_1_span3{
+    font-size: 53.85px;
+    float: left;
+}
+.div3{
+    height: 540px;
+    width: 1000px;
+    margin:0px auto;
+}
+.div3_a1{
+    margin-top: 140px;
+    float: left;
+    margin-right: 100px;
+}
+.div3_div1 > .div3_a2{
+    margin-right: 0px;
+}
+.div3_div2{
+    width: 176px;
+    text-align: center;
+    margin-top: 30px;
+    float: left;
+    margin-right: 98px;
+}
+.div3_span1{
+    font-size: 22px;
+    font-weight: bolder; 
+}
+.div3_div3{
+    margin-right: 0pc;
+}
+.div4{
+    width: 1900px;
+    height: 720px;
+    margin:0px auto;
+    background-image: url("../ps图/images/images/datu1.png");
+    background-repeat: no-repeat;
+    background-size: 1900px 720px;
+}
+.div4_bx{
+    height: 720px;
+    width: 1000px;
+    margin:0px auto;
+}
+.div4_div1{
+    width: 215px;
+    height: 255px;
+    background-color: #716f6d7e;
+    padding: 35px 25px;
+    margin-top: 167px;
+    float: left;
+}
+.div4_span1{
+    font-size: 14px;
+}
+.div4_button1{
+    width: 190px;
+    height: 38px;
+    margin: 25px auto;
+    display: block;
+    color: white;
+    border: 1px solid white;
+    background-color: #716f6d7e;
+    font-weight: bolder;
+    background-image: url("../ps图/images/images/youjiantou.png");
+    background-repeat: no-repeat;
+    background-size: 9px;
+    background-position: 145px 10px;
+}
+.div4_span2{
+    margin-left: 150px;
+    margin-top: 90px;
+    float: left;
+    font-weight: bolder;
+    font-size: 36px;
+}
+.div4_div2{
+    height: 720px;
+    width: 175px;
+    background-color: #716f6d7e;
+    float: right;
+}
+.div4_button2{
+    width: 175px;
+    height: 80px;
+    background-image: url("../ps图/images/images/shangjiantou.png");
+    background-repeat: no-repeat;
+    background-size: initial;
+    background-position: center;
+    outline: none;
+    background-color: transparent;
+    border: none;
+}
+.div4_button3{
+    width: 155px;
+    height: 105px;
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 10px;
+    border: none;
+    margin-bottom: 10px;
+    background-color: #716f6dcb;
+}
+.div4_button3:hover{
+    background-color: white;
+}
+.div4_button4{
+    margin-bottom: 0px;
+}
+.div4_button5{
+    background-image: url("../ps图/images/images/xiajiantou.png");
+}
+.div4_div3{
+    width: 300px;
+    height: 50px;
+    float: left;
+    background-color: #716f6d7e;
+    margin-right: 500px;
+    margin-top: 178px;
+}
+.div4_span3{
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin-top: 7px;
+    margin-left: 10px;
+    font-size: 8px;
+    font-weight: bolder;
+    color: white;
+    float: left;
+    border-right: 2px solid white;
+}
+.div4_a1{
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+    display: block;
+    float: left;
+    margin-left: 10px;
+    background-image: url("../ps图/images/images/chouti.png");
+    background-repeat: no-repeat;
+}
+.div4_a1:hover{
+    background-image: url("../ps图/images/images/chouti1.png");
+    background-repeat: no-repeat;
+}
+.div4_a2{
+    background-image: url("../ps图/images/images/shafa.png");
+}
+.div4_a2:hover{
+    background-image: url("../ps图/images/images/shafa1.png");
+    background-repeat: no-repeat;
+}
+.div4_a3{
+    background-image: url("../ps图/images/images/chuang1.png");
+    margin-left: 20px;
+}
+.div4_a3:hover{
+    background-image: url("../ps图/images/images/chuang.png");
+    background-repeat: no-repeat;
+}
+.div4_a4{
+    background-image: url("../ps图/images/images/yigui.png");
+}
+.div4_a4:hover{
+    background-image: url("../ps图/images/images/yigui1.png");
+    background-repeat: no-repeat;
+}
+.div5{
+    width: 1900px;
+    height: 720px;
+    margin:0px auto;
+    background-color: black;
+}
+.div5_bx{
+    height: 720px;
+    width: 1000px;
+    margin:0px auto;
+}
+.div5_div1{
+    width: 220px;
+    height: 150px;
+    margin: 0px auto;
+    text-align: center;
+}
+.div5_span1{
+    margin-top: 90px;
+    float: left;
+    font-weight: bolder;
+    font-size: 36px;
+    color: white;
+}
+.div5_div2{
+    height: 50px;
+    width: 1000px;
+    margin-top: 90px;
+}
+.div5_div2::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.div5_a1{
+    width: 150px;
+    height: 50px;
+    display: block;
+    float: left;
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 10px;
+    color: white;
+    margin-right: 20px;
+    background-image: url("../ps图/images/images/sheji.png");
+}
+.div5_a2{
+    margin-right: 0px;
+}
+.div5_div3{
+    height: 240px;
+    width: 1000px;
+    margin-top: 60px;
+}
+.div5_div3_div1{
+    width: 320px;
+    height: 240px;
+    float: left;
+    margin-right: 20px;
+    background-image: url("../ps图/images/images/she1.jpg");
+}
+.div5_button1{
+    width: 50px;
+    height: 80px;
+    background-color: #716f6d7e;
+    border: none;
+    margin-top: 80px;
+    background-image: url("../ps图/images/images/zuojiantou.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.div5_div3_div2{
+    width: 320px;
+    height: 240px;
+    float: left;
+    margin-right: 20px;
+    background-image: url("../ps图/images/images/she2.jpg");
+}
+.div5_div3_div2_1{
+    width: 320px;
+    height: 240px;
+    background-color: #333332c9;
+    text-align: center;
+    overflow: hidden;
+    display: none;
+}
+.div5_div3_div2:hover .div5_div3_div2_1{
+    display: block;
+}
+.div5_p1{
+    color: white;
+    font-size: 30px;
+    margin-top: 60px;
+    font-weight: bolder;
+}
+.div5_p2{
+    color: white;
+    font-size: 16px;
+    margin-top: 10px;
+    font-weight: bolder;
+}
+.div5_a3{
+    display: block;
+    margin-top: 10px;
+}
+.div5_div3_div3{
+    width: 320px;
+    height: 240px;
+    float: left;
+    background-image: url("../ps图/images/images/she3.png");
+  
+}
+.div5_button2{
+    width: 50px;
+    height: 80px;
+    background-color: #716f6d7e;
+    border: none;
+    margin-top: 80px;
+    background-image: url("../ps图/images/images/youjiantou.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    float: right;
+}
+.div6{
+    width: 1900px;
+    height: 790px;
+    margin:0px auto;
+    background-image: url("../ps图/images/images/大图沙发.png");
+    background-repeat: no-repeat;
+    background-size: 1900px 630px;
+}
+.div6_bx{
+    height: 790px;
+    width: 1000px;
+    margin:0px auto;
+    text-align: center;
+}
+.div6_div1{
+    width: 220px;
+    height: 150px;
+    margin: 0px auto;
+    text-align: center;
+}
+.div6_span2{
+    margin-top: 90px;
+    float: left;
+    font-weight: bolder;
+    font-size: 36px;
+}
+.div6_div2{
+    width: 410px;
+    height: 200px;
+    background-color:  #716f6d7e;
+    margin-top: 370px;
+    margin-left: 60px;
+    float: left;
+    text-align: left;
+}
+.div6_img{
+    margin: 20px;
+    float: left;
+}
+.div6_div2_1{
+    width: 185px;
+    height: 160px;
+    float: left;
+    margin-top: 22px;
+}
+.div6_p2{
+    font-size: 14px;
+    color: white;
+    margin-top: 10px;;
+}
+.div6_p1{
+    font-size: 24px;
+    color: white;
+}
+.div6_button1{
+    width: 84px;
+    height: 28px;
+    background-color: transparent;
+    border:1px solid white;
+    font-size: 14px;
+    color: white;
+}
+.div7{
+    width: 1900px;
+    height: 550px;
+    margin:0px auto;
+    background-image: url("../ps图/images/images/单页-家具设计\(头背景图\)_02.png");
+    background-repeat: no-repeat;
+    background-size: 1900px 680px;
+    background-position-y: -130px;
+    text-align: center;
+    overflow: hidden;
+}
+.div7_1{
+    width: 1900px;
+    height: 550px;
+    background-color: #716f6d7e;
+    display: none;
+}
+.div7:hover .div7_1{
+    display: block;
+}
+.div7_p1{
+    display: inline-block;
+    margin-top: 130px;
+    font-size: 60px;
+    color: white;
+}
+.div7_button1{
+    width: 160px;
+    height: 60px;
+    font-size: 24px;
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+    margin-top: 20px;
+}
+.div8{
+    width: 1900px;
+    height: 380px;
+    margin:0px auto;
+    background-color: black;
+    overflow: hidden;
+}
+.div8_bx{
+    height: 380px;
+    width: 1000px;
+    margin:0px auto;
+    
+}
+.div8_lu1{
+    float: left;
+    margin:0px 65px;
+}
+.div8 li{
+    width: 120px;
+}
+.div8 a{
+    color: white;
+    font-size: 14px;
+}
+.div8_a1{
+    display: block;
+    font-weight: 900;
+    margin-top: 75px;
+    margin-bottom: 35px;
+}
+.div8_a2{
+    display: block;
+    margin-top: 15px;
+}
+.div8_a3{
+    padding-left: 20px;
+}
+.weixin{
+    background-image: url("../ps图/images/images/weixin.png");
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position-y: 3px;
+}
+.weibo{
+    background-image: url("../ps图/images/images/weibo.png");
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position-y: 3px;
+}
+.dizhi{
+    background-image: url("../ps图/images/images/信封.png");
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position-y: 3px;
+}
+.dianhua{
+    background-image: url("../ps图/images/images/dianhua.png");
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position-y: 3px;
+}

@@ -1,0 +1,25 @@
+*{
+    padding: 0;
+    margin:0;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;   
+}
+.cf::after{
+    clear: both;
+    content: "";
+    display: block;
+}
+.bx{
+    width: 1000px;
+    margin: 0px auto;
+}
+.right{
+    float: right;
+}
+.left{
+    float: left;
+}

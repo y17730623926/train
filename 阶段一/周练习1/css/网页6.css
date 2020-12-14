@@ -1,0 +1,98 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+/* a {
+    text-decoration: none;
+} */
+li{
+   
+    list-style: none;
+}
+.div1{
+    width: 1200px;
+    margin: 20px auto;
+    height: 500px;
+    padding-top: 90px;;
+    background-image: url("../img/2.jpg");
+}
+span{
+   color: lightgray;
+   font-size: 14px;
+}
+h1{
+    font-weight: bolder;
+    color: white;
+    text-align: center;
+}
+.div1_1{
+    width: 300px;
+    height: 400px;
+    background-color: white;
+    margin: 20px auto;
+    border-radius: 10px;
+    padding: 10px  20px;
+    text-align: center;
+}
+.div1_2{
+    margin-left: 10px;
+}
+.div1_2::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.span2{
+    padding-top: 5px;
+    float: left;
+}
+.input1,.input2,.input3{
+    width: 220px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    outline: none;
+    margin-left: 15px;
+}
+hr{
+    margin: 10px;
+}
+.input2{
+    width: 130px;
+    float: left;
+}
+.btn1{
+    width: 90px;
+    height: 30px;
+    float: right;
+    font-weight: bolder;
+    background-color: silver;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.input3{
+    background-image: url("../img/照相机.png");
+    background-repeat: no-repeat;
+    background-size: 40px;
+    background-position-x: 240px;
+    background-position-y: -84px;
+}
+.input3:hover{
+    background-position-y: -124px;
+}
+.btn2{
+    width: 260px;
+    height: 35px;
+    margin: 20px 0px;
+    color: white;
+    background-color: midnightblue;
+    border: none;
+    border-radius: 5px;
+    font-weight: bolder;
+    font-size: 16px;
+}
+a{
+    color: black;
+    font-size: 13px;
+}

@@ -1,0 +1,353 @@
+*{
+    padding: 0;
+    margin:0;
+}
+body{
+    background-color: blanchedalmond;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;   
+}
+.bg{
+    width: 500px;
+    height: 600px;
+    background-color: #fff;
+    margin: 100px auto;
+    position: relative;
+}
+.zuoshou{
+    width: 80px;
+    height: 80px;
+    background-color: #f9d946;
+    border: 6px solid black;
+    border-radius: 27px; 
+    transform: rotate(-50deg);
+    position: absolute;
+    top: 270px;
+    left: 73px;
+}
+.zuoshou1{
+    height: 6px;
+    width: 25px;
+    margin: 0px auto;
+    background-color: black;
+    border-radius:25px;
+    margin-top: 20px;
+}
+.youshou{
+    width: 80px;
+    height: 80px;
+    background-color: #f9d946;
+    border: 6px solid black;
+    border-radius: 27px; 
+    transform: rotate(50deg);
+    position: absolute;
+    top: 270px;
+    right: 73px;
+
+}
+.youshou1{
+    height: 6px;
+    width: 25px;
+    margin: 0px auto;
+    background-color: black;
+    border-radius:25px;
+    margin-top: 20px;
+}
+.tui{
+    position: absolute;
+    top: 450px;
+    left: 165px;
+}
+.datui{
+    height: 35px;
+    width: 35px;
+    background-color: black;
+    margin-left: 45px;
+}
+.jiao{
+    width: 80px;
+    height: 40px;
+    background-color: black;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 15px;
+}
+.tui1{
+    position: absolute;
+    top: 450px;
+    right: 165px;
+}
+.datui1{
+    height: 35px;
+    width: 35px;
+    background-color: black;
+}
+.jiao1{
+    width: 80px;
+    height: 40px;
+    background-color: black;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 15px;
+}
+.shenzi{
+    width: 280px;
+    height: 450px;
+    background-color: #f9d946;
+    margin: 10px auto;
+    border: 6px solid black;
+    border-radius: 140px;
+    position: absolute;
+    top: 10px;
+    left: 105px;
+    overflow: hidden;
+    transition: all 5s;
+}
+.zuoyankuang{
+    height: 15px;
+    width: 60px;
+    background-color: black;
+    transform: rotate(4deg);
+    transform-origin: left top;
+    position: absolute;
+    top: 125px;
+}
+.youyankuang{
+    height: 15px;
+    width: 60px;
+    background-color: black;
+    transform: rotate(-4deg);
+    transform-origin: right top;
+    position: absolute;
+    top: 125px;
+    right: 0px;
+}
+.zuoyan,.youyan{
+    width: 90px;
+    height: 90px;
+    border: 5px solid  black;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: 80px;
+    left: 37px;
+    transition: all 1s;
+}
+.shenzi .youyan{
+   position: absolute;
+   left: 139px;
+}
+.hyz{
+    width: 45px;
+    height: 45px;
+    background-color: black;
+    margin:0px auto;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+.byz{
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    float:right;
+    border-radius: 50%;
+    margin-right: 5px;
+    margin-top: 7px;
+}
+.zui{
+    width: 80px;
+    height: 50px;
+    border-top: 5px solid black;
+    overflow: hidden;
+    position: relative;
+    position: absolute;
+    top: 210px;
+    left: 100px;
+    border-radius: 5px;
+}
+.zui1{
+    width: 80px;
+    height: 55px;
+    border: 5px solid black;
+    transform: rotate(-35deg);
+    border-radius: 24px;
+    background-color: white;
+    position: absolute;
+    top: -47px;
+    transition: all 1s;
+}
+.kuzi{
+    width: 100%;
+    height: 120px;
+    background-color: #2074a0;
+    position: absolute;
+    bottom: 0px;
+    border: 5px solid black;
+    border-left: none;
+    border-bottom: none;
+}
+.kuzi1{
+    width: 170px;
+    height: 55px;
+    border: 5px solid black;
+    border-bottom: none;
+    background-color: #2074a0;
+    position: absolute;
+    bottom: 120px;
+    left: 50px;
+}
+.beidaiz{
+    height: 15px;
+    width: 140px;
+    background-color: #2074a0;
+    border: 5px solid black;
+    transform: rotate(40deg);
+    position: absolute;
+    top: 240px;
+    left: -55px;
+}
+.kou{
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 50%;
+    float: right;
+    margin-top: 2px;
+    margin-right: 2px;
+}
+.beidaiy{
+    height: 15px;
+    width: 140px;
+    background-color: #2074a0;
+    border: 5px solid black;
+    transform: rotate(-40deg);
+    position: absolute;
+    top: 240px;
+    right: -55px;
+}
+.kou1{
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 50%;
+    float: left;
+    margin-top: 2px;
+    margin-left: 2px;
+}
+.zuokoudai{
+    height: 50px;
+    width: 50px;
+    overflow: hidden;
+    position: absolute;
+    top: 340px;
+    left: 11px;
+}
+.yuan1{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 5px solid black;
+    position: absolute;
+    top: -45px;
+    right: 10px;
+}
+.youkoudai{
+    height: 50px;
+    width: 50px;
+    overflow: hidden;
+    position: absolute;
+    top: 340px;
+    right: 11px;
+}
+.yuan2{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 5px solid black;
+    position: absolute;
+    top: -45px;
+    left: 10px;
+}
+.zhongkoudai{
+    width: 60px;
+    height: 45px;
+    border: 5px solid black;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    position: absolute;
+    left: 105px;
+    bottom: 90px;
+}
+.dang{
+    width: 5px;
+    height: 60px;
+    background-color: black;
+    margin: 0px auto;
+    margin-top: 60px;
+    border-radius: 5px;
+}
+.yinying{
+    width: 200px;
+    height: 10px;
+    background-color: #b2b2b28e;
+    border-radius: 50%;
+    position: absolute;
+    top: 520px;
+    left: 150px;
+}
+
+.zuoyan:hover,.youyan:hover{
+    transform: rotate(9999deg);
+}
+.zui1:hover{
+    top: -100px;
+}
+.zuoshou,.youshou{
+    transition: all 2s;
+}
+.zuoshou:hover,.youshou:hover{
+    transform: rotate(9999deg);
+    
+}
+.ts{
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    left: -100px;
+    display: none;
+}
+.ts1{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid #2074a0;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+}
+.ts2{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid #2074a0;
+    position: absolute;
+    top: 35px;
+    right: 45px;
+}
+.ts3{
+    width: 100px;
+    height: 50px;
+    border-radius: 15%;
+    border: 2px solid #2074a0;
+    position: absolute;
+    bottom: 0px;
+    left: 10px;
+    color: black;
+}
+.yinying:hover .ts{
+    display: block;
+}

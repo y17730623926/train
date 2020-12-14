@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>表单</title>
+</head>
+
+<body>
+    <form>
+        用户名：<input type="text" placeholder="请输入关键字" readonly value="昵称"><br>
+        <!-- 文本输入框  placeholder定义关键字提示语 readonly定义只读 一般伴随value使用-->
+        密码：<input type="password"><br>
+        <!-- 密码框 -->
+        性别：<input type="radio" name="sex">男
+        <input type="radio" name="sex">女<br>
+        <!-- 单选框 name属性定义多选一 -->
+        爱好：<input type="checkbox">打游戏
+        <input type="checkbox">敲代码
+        <input type="checkbox" checked>打篮球
+        <input type="checkbox">睡觉<br>
+        <!-- 多选框 checked属性定义默认选中 -->
+        省份：<select>
+            <option disabled selected>--省份选择--</option>
+            <option>陕西</option>
+            <option>山西</option>
+            <option>广东</option>
+            <option>河南</option>
+            <!-- 下拉项 disabled定义失效 select定义默认选中 -->
+        </select><br>
+        <!-- 下拉框 -->
+        数字/月份：<input type="number" min="1" max="12" step="5"><br>
+        <!-- 数字类型输入框 min定义最小数字范围 max定义最大数字范围 step定义输入字段的数字间隔 -->
+        <input type="date">
+        <!-- 包含日期的输入框 -->
+        <input type="file"><br>
+        <!-- 文件域 -->
+        <input type="reset">
+        <!-- 重置按钮 -->
+        <input type="button" value="正在加载"><br>
+        <!-- 按钮 伴随value使用 value属性定义按钮文字内容 -->
+        <input type="submit" value="登录"><br>
+        <!-- 提交按钮 value属性可以更改文字内容 -->
+        <input type="image" src="../项目/图片/mww.jpg" width="100" height="50">
+        <!-- 图像式提交按钮 伴随src使用 width定义图片的宽 height定义图片的高 -->
+        <textarea cols="50" rows="30"></textarea>
+        <!-- 可拖动文本框
+        textarea定义多行文本域 cols定义文本域的宽（每行的字符数） rows定义文本域的高（显示的行数） -->
+    </form> 
+</body>
+
+</html>

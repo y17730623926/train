@@ -1,0 +1,149 @@
+*{
+    padding: 0;
+    margin:0;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;   
+}
+.cf::after{
+    clear: both;
+    content: "";
+    display: block;
+}
+.bx{
+    width: 1200px;
+    margin: 0px auto;
+    overflow: hidden;
+}
+.right{
+    float: right;
+}
+.left{
+    float: left;
+}
+html{
+    font-size: 100px;
+}
+/* 页头 */
+.container{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.header{
+    width: 100%;
+    height: 35px;
+    margin: 0 auto;
+    background: #333333;
+}
+.header_p1{
+    font-size: 12px;
+    color: #ffffff;
+    line-height: 35px;
+}
+.header_div1{
+    font-size: 12px;
+    line-height: 35px;
+}
+.header_div1 a img{
+    display: inline-block;
+    width: 15px;
+    position: relative;
+    top: 2px;
+    margin-right: 8px;
+}
+.header_div1 a,.header_div1 span{
+    color: #fff;
+    font-size: 12px;
+}
+.header_div1 span{
+    display: inline-block;
+    padding: 0 12px;
+}
+.nav{
+    height: 80px;
+}
+.nav_a1{
+    float: left;
+    width: 18.33%;
+    padding: 0.85% 0;
+}
+.nav_a1 img{
+    display: block;
+    width: 100%;
+}
+.nav_ul1 li{
+    float: left;
+    width: 98px;
+    line-height: 80px;
+    margin-left: 10px;
+    text-align: center;
+}
+.nav_ul1 li a{
+    display: block;
+    font-size: 16px;
+    color: #505050;
+    transition: all .5s;
+}
+.nav_ul1 li a:hover{
+    background: #16466a;
+    color: #fff;
+}
+.nav_ul1 li .nav_a2{
+    background: #16466a;
+    color: #fff;
+}
+.nav2_div1{
+    width: 0%;
+    height: 100%;
+    position: fixed;
+    overflow-y: auto;
+    right: 0%;
+    top: 0px;
+    background: url("../img/Nav_bg.png") repeat 0 0;
+    z-index: 50;
+    box-shadow: -2px -2px 2px rgba(0,0,0,0.5);
+    overflow: hidden;
+    transition:  all .7s;
+}
+.nav2_div1 a{
+    color: #fff;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 16px;
+    line-height: 42px;
+    overflow: hidden;
+    border-bottom: 1px solid #dbdbdb;
+
+}
+.nav2_a1{
+    width: 36px;
+    height: 27px;
+    margin-top: 17px;
+    background: url("../img/nav_icon.png") no-repeat right 0px;
+}
+.nav2{
+    display: none;
+}
+.nav2:hover .nav2_div1{
+   width: 30%;
+}
+
+.footer{
+    background: #333;
+}
+.footer p{
+    font-size: 12px;
+    color: #fff;
+    padding: 1% 0;
+    text-align: center;
+}
+.footer p a{
+    font-size: 12px;
+    color: #fff;
+}
